@@ -102,6 +102,11 @@ return {
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     })
 
+    -- Disable Angular language server (not needed for non-Angular projects)
+    vim.lsp.config("angularls", {
+      enabled = false,
+    })
+
     vim.lsp.config("lua_ls", {
       settings = {
         Lua = {
